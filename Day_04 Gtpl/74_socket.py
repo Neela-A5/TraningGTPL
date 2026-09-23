@@ -9,5 +9,6 @@ print('waiting for connections')
 while True:
     c, address = s.accept()
     print("Connected to GTPL.")
-    c.send('welcome to GTPL')
+    c.send(bytes('welcome to GTPL', 'utf-8'))
+    c.close()
     
